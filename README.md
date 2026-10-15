@@ -1,4 +1,4 @@
-# F1 Regs
+# Stewards' Room
 
 A free "ask the rulebook" site for Formula 1 fans. Ask things like *"Should Antonelli have
 got a track limits penalty last race?"* and get an answer that cites the FIA regulations and

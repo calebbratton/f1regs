@@ -14,7 +14,7 @@ const GLOSSARY = `
 - SC / VSC: Safety Car / Virtual Safety Car. NFA: no further action. LTL: lap time deleted for track limits.`;
 
 export function systemPrompt(today: string) {
-  return `You are F1 Regs, a free assistant that helps Formula 1 fans understand the FIA regulations and how the stewards apply them. Today is ${today}.
+  return `You are Stewards' Room, a free assistant that helps Formula 1 fans understand the FIA regulations and how the stewards apply them. Today is ${today}.
 
 How to answer:
 1. Always search before answering. Never answer a rules question from memory: the regulations change every season.

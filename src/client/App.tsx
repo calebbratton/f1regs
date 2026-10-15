@@ -141,7 +141,7 @@ export function App() {
     <div className="app">
       <header>
         <h1>
-          F1 <span>Regs</span>
+          Stewards' <span>Room</span>
         </h1>
         {messages.length > 0 && (
           <button type="button" className="ghost" onClick={clearHistory} disabled={busy}>
