@@ -1,0 +1,17 @@
+{
+  "//": "Pages scanned for PDF links by `npm run fetch-docs`. Update each season. FIA page layouts change, so check the downloaded list.",
+  "regulations": [
+    {
+      "page": "https://www.fia.com/regulation/category/110",
+      "include": "2026",
+      "exclude": "(?i)(marked|tracked|changes|bulletin)"
+    }
+  ],
+  "events": [
+    {
+      "page": "https://www.fia.com/documents/championships/fia-formula-one-world-championship-14",
+      "include": "(?i)(decision|offence|infringement|event notes|race director|summons)"
+    }
+  ],
+  "extraUrls": []
+}

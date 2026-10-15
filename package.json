@@ -1,0 +1,37 @@
+{
+  "name": "f1regs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "deploy": "vite build && wrangler deploy",
+    "typecheck": "wrangler types && tsc -p tsconfig.worker.json && tsc -p tsconfig.json",
+    "test": "vitest run",
+    "fetch-docs": "node --experimental-strip-types scripts/fetch-fia.ts",
+    "ingest": "node --experimental-strip-types scripts/ingest.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/react": "^4.0.145",
+    "@cloudflare/ai-chat": "^0.12.1",
+    "agents": "^0.28.1",
+    "ai": "^7.0.141",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-markdown": "^10.1.0",
+    "workers-ai-provider": "^4.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "unpdf": "^1.8.1",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.151.0"
+  }
+}

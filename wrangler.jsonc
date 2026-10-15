@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "f1regs",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/agents/*", "/api/*"]
+  },
+  "ai": { "binding": "AI", "remote": true },
+  "vectorize": [
+    { "binding": "VECTORIZE", "index_name": "f1regs-docs", "remote": true }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "f1regs",
+      // Fill in after `npx wrangler d1 create f1regs` (see README).
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations",
+      "remote": true
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "F1RegsAgent", "class_name": "F1RegsAgent" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["F1RegsAgent"] }],
+  "secrets": { "required": ["INGEST_TOKEN"] },
+  "vars": {
+    // Any Workers AI text model that supports tool calling.
+    "CHAT_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "observability": { "enabled": true }
+}
